@@ -16,16 +16,17 @@ This project implements a deep learning model for detecting Diabetic Retinopathy
 The model is trained from scratch using a custom DRResNet architecture with advanced preprocessing, augmentation, and explainability via Grad-CAM.
 
 ## Repository Structure
-
- ├── shahwar_yasir/  
- 
+```plaintext
+    ├── shahwar_yasir/  
     ├── model/
     │   ├── drresnet_enhanced.pth  
     ├── notebooks/
     │   ├── training_gradcam.ipynb 
     ├── report.pdf 
     ├── README.md 
-    ├── requirements.txt                     
+    ├── requirements.txt  
+```
+                   
 
 ## Dataset
 Source: Kaggle – Diabetic Retinopathy Balanced Dataset
@@ -37,11 +38,11 @@ Test: 4,971
 
 ## Installation
 Clone this repository and install dependencies:
-
+```bash
 git clone https://github.com/ShahwarYasir/GDGOC-PIEAS-AI-ML-HACKATHON.git
 cd shahwar_yasir
 pip install -r requirements.txt
-
+```
 
 ## Recommended libraries:
 torch, torchvision, torchmetrics
@@ -52,18 +53,18 @@ tqdm
 ## Usage
 ## 1. Prepare Dataset
 Download and unzip the dataset to the folder structure:
-dataset/content/Diabetic_Balanced_Data/
-    
+   ```plaintext
+    dataset/content/Diabetic_Balanced_Data/
     ├── train/
-   
     ├── val/
-    
     └── test/
-
+   ```
 ## 2. Training
 Run the notebook for training:
+```bash
 # In Jupyter/Colab
 !jupyter notebook notebooks/training_gradcam.ipynb
+```
 Model: DRResNet (from scratch)
 Optimizer: Adam
 Scheduler: CosineAnnealingLR
@@ -72,13 +73,17 @@ Mixed precision training enabled
 
 ## 3. Evaluation
 After training, load the best model weights:
+```bash
 model.load_state_dict(torch.load("model/drresnet_enhanced.pth"))
 model.eval()
+```
 Evaluate on the test set for accuracy, F1-score, precision, recall
 
 ## 4. Grad-CAM Visualization
 Visualize important regions of retinal images:
+```bash
 visualize_gradcam(model, test_loader, target_layer=model.layer4[1].conv2, device=device, num_images=5)
+```
 Results
 ### Test Accuracy: ~0.70
 Grad-CAM visualizations show the model focuses on relevant retinal regions for DR classification.
@@ -96,6 +101,7 @@ Accuracy can improve with ensemble or larger models
 Kaggle Diabetic Retinopathy Dataset
 He, K. et al. “Deep Residual Learning for Image Recognition,” CVPR 2016
 Grad-CAM: Selvaraju et al., 2017
+
 
 
 
