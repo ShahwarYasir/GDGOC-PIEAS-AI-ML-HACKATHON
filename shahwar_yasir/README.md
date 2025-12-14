@@ -18,14 +18,17 @@ The model is trained from scratch using a custom DRResNet architecture with adva
 ## Repository Structure
 shahwar_yasir/
 ├── model/
+
 │   └── drresnet_enhanced.pth  
 
 ├── notebooks/
+
 │   └── training_gradcam.ipynb  
 
 ├── README.md
 
 ├── requirements.txt    
+
 └── report.pdf                      
 
 ## Dataset
@@ -97,6 +100,7 @@ Accuracy can improve with ensemble or larger models
 Kaggle Diabetic Retinopathy Dataset
 He, K. et al. “Deep Residual Learning for Image Recognition,” CVPR 2016
 Grad-CAM: Selvaraju et al., 2017
+
 
 
 
