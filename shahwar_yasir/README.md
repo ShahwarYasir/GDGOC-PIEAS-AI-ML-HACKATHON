@@ -16,8 +16,9 @@ This project implements a deep learning model for detecting Diabetic Retinopathy
 The model is trained from scratch using a custom DRResNet architecture with advanced preprocessing, augmentation, and explainability via Grad-CAM.
 
 ## Repository Structure
-``plaintext
-├── shahwar_yasir/
+
+ ├── shahwar_yasir/  
+ 
     ├── model/
     │   ├── drresnet_enhanced.pth  
     ├── notebooks/
@@ -95,6 +96,7 @@ Accuracy can improve with ensemble or larger models
 Kaggle Diabetic Retinopathy Dataset
 He, K. et al. “Deep Residual Learning for Image Recognition,” CVPR 2016
 Grad-CAM: Selvaraju et al., 2017
+
 
 
 
