@@ -58,8 +58,11 @@ tqdm
 ## 1. Prepare Dataset
 Download and unzip the dataset to the folder structure:
 dataset/content/Diabetic_Balanced_Data/
+    
     ├── train/
+   
     ├── val/
+    
     └── test/
 
 ## 2. Training
@@ -98,4 +101,5 @@ Accuracy can improve with ensemble or larger models
 Kaggle Diabetic Retinopathy Dataset
 He, K. et al. “Deep Residual Learning for Image Recognition,” CVPR 2016
 Grad-CAM: Selvaraju et al., 2017
+
 
